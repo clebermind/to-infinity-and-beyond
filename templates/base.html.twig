@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>My Challenge</title>
+    </head>
+    <body>
+        <div class="item">
+            <h2>Words without any repeating letters</h2>
+            <p>The word "{{ word }}" has or nor repetition letters? {{ repeatingLetters ? 'No' : 'Yes' }}</p>
+        </div>
+
+        <div class="item">
+            <h2>Literal date parsing</h2>
+            <p>Parsing "{{ date }}" results in {{ parsedDate }}</p>
+        </div>
+
+        <div class="item">
+            <h2>String merge</h2>
+            <p>Merging the string "{{ strings.0 }}" and "{{ strings.1 }}" results in {{ mergedStrings }}</p>
+        </div>
+
+        <div class="item">
+            <h2>Super-digit</h2>
+            <p>SUM of each individual digit of {{ digit }} results in {{ superDigit }}</p>
+        </div>
+
+        <div class="item">
+            <h2>XML import</h2>
+            <p>The result of the given XML file in array is:</p>
+            {% for key, property in properties %}
+                {{ key }}: {{ property }}<br />
+            {% endfor %}
+        </div>
+    </body>
+
+    <style>
+        div.item  { margin-top: 40px; padding: 20px; border: 1px solid #ccc}
+    </style>
+
+</html>
